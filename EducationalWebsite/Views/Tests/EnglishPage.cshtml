@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Английский";
+}
+
+<h2 class="test-page-title">Тест по английскому языку</h2>
+<div class="test-page__wrapper">
+<form method="post" asp-controller="Tests" asp-action="EnglishPage">
+    <question title="1. I like potatoes, but I ... them everyday." radio-group="first"
+    first-answer-option="haven't eat"
+    second-answer-option="not eat"
+    third-answer-option="don't eat" />
+
+    <question title="2. Nick ... a book now." radio-group="second"
+    first-answer-option="is reading"
+    second-answer-option="are reading"
+    third-answer-option="had read" />
+
+    <question title="3. How many lessons ... you have every day?" radio-group="third"
+    first-answer-option="do"
+    second-answer-option="have"
+    third-answer-option="are" />
+
+    <question title="4. I ... wait for him now. I am very busy." radio-group="fourth"
+    first-answer-option="wasn't"
+    second-answer-option="can't"
+    third-answer-option="hasn't" />
+
+    <label class="question">5. Что изображено на картинке? Переведите это слово.</label>
+    <img class="tests-img" src="~/images/house.png" alt="Дом" /><br />
+    <input type="text" required name="fifth" /><br />
+
+    <input type="submit" value="Проверить" />
+</form>
+<img class="back-img" src="~/images/english_back.png" alt="Флаг" />
+</div>

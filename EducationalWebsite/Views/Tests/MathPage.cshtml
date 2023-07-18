@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Математика";
+}
+
+<h2 class="test-page-title">Тест по математике</h2>
+<div class="test-page__wrapper">
+<form method="post" asp-controller="Tests" asp-action="MathPage">
+    <question title="1. Равенство является верным при x = 7:" radio-group="first"
+    first-answer-option="3x = -21"
+    second-answer-option="x(x+2) = 0"
+    third-answer-option="5x-6 = 43-2x" />
+
+    <question title="2. Можно ли решить уравнение с одной неизвестной?" radio-group="second"
+    first-answer-option="нет"
+    second-answer-option="зависит от уравнения"
+    third-answer-option="да" />
+
+    <question title="3. Двумерные фигуры:" radio-group="third"
+    first-answer-option="круг, шар, цилиндр"
+    second-answer-option="круг, треугольник, квадрат"
+    third-answer-option="пирамида, треугольник, овал" />
+
+    <question title="4. Корнем уравнения -2x = 14 является:" radio-group="fourth"
+    first-answer-option="7"
+    second-answer-option="-7"
+    third-answer-option="5" />
+
+    <label class="question">5. Под какой цифрой показан прямой угол?</label>
+    <img class="tests-img" src="~/images/angles.png" alt="Углы" /><br />
+    <input type="number" min="1" max="7" required name="fifth" /><br />
+
+    <input type="submit" value="Проверить" />
+</form>
+<img class="back-img" src="~/images/math_back.png" alt="Спираль" />
+</div>

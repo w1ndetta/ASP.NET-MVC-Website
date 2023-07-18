@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - #ПройдиТест</title>
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/second.css" asp-append-version="true" />
+    <link rel="icon" href="~/images/check-mark.png" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a class="logo" asp-controller="Home" asp-action="Index">#ПройдиТест</a>
+                <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a asp-controller="Home" asp-action="Index">Главная</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a asp-controller="Home" asp-action="AboutSite">О сайте</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <div>
+            &copy; 2023 - #ПройдиТест - <a asp-controller="Home" asp-action="AboutSite">О сайте</a>
+        </div>
+    </footer>
+</body>
+</html>

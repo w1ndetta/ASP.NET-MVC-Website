@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="information">
+    <h1 class="information-title">
+        Сайт #ПройдиТест предназначен для быстрой проверки ваших школьных знаний
+    </h1>
+</div>
+<div class="test-container">
+    <h2 class="main-title">Тесты</h2>
+    <ul class="tests">
+        <li class="test">
+            <a asp-controller="Tests" asp-action="BiologyPage">
+                <img src="~/images/biology.png" class="test-image" alt="Лупа и ДНК" />
+                <h3 class="test-title">Тест по биологии</h3>
+            </a>
+        </li>
+        <li class="test">
+            <a asp-controller="Tests" asp-action="GeographyPage">
+                <img src="~/images/geography.png" class="test-image" alt="Глобус" />
+                <h3 class="test-title">Тест по географии</h3>
+            </a>
+        </li>
+        <li class="test">
+            <a asp-controller="Tests" asp-action="EnglishPage">
+                <img src="~/images/english.png" class="test-image" alt="Достопримечательности" />
+                <h3 class="test-title">Тест по английскому</h3>
+            </a>
+        </li>
+        <li class="test">
+            <a asp-controller="Tests" asp-action="MathPage">
+                <img src="~/images/math.png" class="test-image" />
+                <h3 class="test-title">Тест по математике</h3>
+            </a>
+        </li>
+    </ul>
+</div>

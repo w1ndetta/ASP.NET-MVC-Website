@@ -1,0 +1,36 @@
+﻿@model int
+@{
+    ViewData["Title"] = "Результат";
+}
+
+<div class="information">
+    <h1 class="information-title">
+        Результат теста: @Model
+        @if(Model == 1)
+        {
+            @: правильный ответ 
+        }
+        else if(Model > 1 && Model < 5)
+        {
+            @: правильных ответа 
+        }
+        else
+        {
+            @: правильных ответов 
+        }
+        из 5 возможных
+    </h1>
+    <div class="back-btn">
+        <a asp-controller="Home" asp-action="Index">На главную</a>
+    </div>
+</div>
+@if(Model < 5) {
+    <div class="result-text">
+        <h2>Не расстраиваетесь, это тоже неплохой результат. Вы можете попробовать еще раз!</h2>
+    </div>
+}
+else {
+    <div class="result-text">
+        <h2>Вау! Отличный результат. Попробуйте другие темы.</h2>
+    </div>
+}

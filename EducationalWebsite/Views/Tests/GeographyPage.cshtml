@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "География";
+}
+
+<h2 class="test-page-title">Тест по географии</h2>
+<div class="test-page__wrapper">
+<form method="post" asp-controller="Tests" asp-action="GeographyPage">
+    <question title="1. Сколько всего океанов на Земле?" radio-group="first"
+    first-answer-option="один"
+    second-answer-option="больше двухсот"
+    third-answer-option="пять" />
+
+    <question title="2. Столица Испании?" radio-group="second"
+    first-answer-option="Париж"
+    second-answer-option="Лиссабон"
+    third-answer-option="Мадрид" />
+
+    <question title="3. Самая высокая гора в мире?" radio-group="third"
+    first-answer-option="Килиманджаро"
+    second-answer-option="Джомолунгма"
+    third-answer-option="Эльбрус" />
+
+    <question title="4. Какого моря не существует?" radio-group="fourth"
+    first-answer-option="Бирюзовое"
+    second-answer-option="Красное"
+    third-answer-option="Черное" />
+
+    <label class="question">5. Флаг какой это страны?</label>
+    <img class="tests-img" src="~/images/flag.jpg" alt="Флаг" /><br />
+    <input type="text" required name="fifth" /><br />
+
+    <input type="submit" value="Проверить" />
+</form>
+<img class="back-img" src="~/images/geography_back.png" alt="Глобус" />
+</div>

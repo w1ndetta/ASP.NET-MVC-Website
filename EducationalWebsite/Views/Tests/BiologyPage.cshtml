@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Биология";
+}
+
+<h2 class="test-page-title">Тест по биологии</h2>
+<div class="test-page__wrapper">
+<form method="post" asp-controller="Tests" asp-action="BiologyPage">
+    <question title="1. Биология - наука, изучающая:" radio-group="first"
+    first-answer-option="живую и неживую природу"
+    second-answer-option="живую природу"
+    third-answer-option="сезонные изменения в живой природе" />
+
+    <question title="2. Строение растений изучает наука:" radio-group="second"
+    first-answer-option="экология"
+    second-answer-option="биология"
+    third-answer-option="ботаника" />
+
+    <question title="3. Клеточное строение имеют:" radio-group="third"
+    first-answer-option="все растения"
+    second-answer-option="некоторые растения"
+    third-answer-option="только плоды рябины" />
+
+    <question title="4. Ракообразные - это:" radio-group="fourth"
+    first-answer-option="наземные животные"
+    second-answer-option="преимущественно водные животные"
+    third-answer-option="животные, способные к полету" />
+
+    <label class="question">5. Где на картинке сова? (напишите цифрой)</label>
+    <img class="tests-img" src="~/images/animals.jpeg" alt="Животные" /><br />
+    <input type="number" min="1" max="7" required name="fifth" /><br />
+
+    <input type="submit" value="Проверить" />
+</form>
+<img class="back-img" src="~/images/biology_back.png" alt="Листки" />
+</div>
